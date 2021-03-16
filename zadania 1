@@ -1,0 +1,16 @@
+package pjatk;
+
+
+
+public class pr_1 {
+    private static final double CE_TO_KE = 273.15;
+
+    public static void main(String[] args) {
+        System.out.println("Celsius   Kelvin");
+        for (int i = 1; i <= 10; i++) {
+            double km = i + CE_TO_KE;
+            System.out.println(i + "\t\t" + km);
+
+        }
+    }
+}
