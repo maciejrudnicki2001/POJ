@@ -69,6 +69,38 @@ public class pr_2 {
     }
 }
 //zadanie_trzecie
+package pjatk;
+
+import java.util.Scanner;
+public class pr_3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ilu studentów: ");
+        int nos = scanner.nextInt();
+
+        scanner.nextLine();
+        System.out.println("Imie ");
+        String name = scanner.nextLine();
+        System.out.println("Punkty: ");
+        int points = scanner.nextInt();
+        for( int i = 0; i < nos - 1; i++) {
+            scanner.nextLine();
+            System.out.println("Imie: ");
+            String name1 = scanner.nextLine();
+
+
+            System.out.println("Punkty: ");
+            int points1 = scanner.nextInt();
+
+            if(points <points1)
+            {
+                name = name1;
+                points = points1;
+            }
+        }
+        System.out.println("Najlepszy student: " + name + " "+points);
+    }
+}
 //zadanie_czwarte
 package pjatk;
 
