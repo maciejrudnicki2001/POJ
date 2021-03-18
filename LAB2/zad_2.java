@@ -5,13 +5,15 @@ import java.util.Random;
 public class pr_7 {
 
     public static void main(String[] args) {
-        int[] Tablica = new int[3];
-        int[] Tablica2 = new int[3];
-        int[] Tablica3 = new int[3];
+        Random rand = new Random();
+        int c = rand.nextInt(10);
+        int[] Tablica = new int[c];
+        int[] Tablica2 = new int[c];
+        int[] Tablica3 = new int[c];
         int i = 0;
-        while(i < 3){
+        while(i < c){
             //Wprowadziłem generowanie liczb
-            Random rand = new Random();
+            Random rand1 = new Random();
             int a = rand.nextInt(50);
             int b = rand.nextInt(50);
             Tablica[i] = a;
