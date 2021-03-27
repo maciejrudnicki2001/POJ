@@ -12,4 +12,8 @@ public class FourthTask {
         }
         return sum;
     }
+    public static void main(String[] args) {
+        int[] array = {1,3,2};
+        System.out.println(plus_sum(array));
+    }
 }
