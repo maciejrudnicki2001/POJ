@@ -10,11 +10,11 @@ public class FirstHomeTask {
         int how_many_signs = scanner.nextInt();
         String[] array = new String[how_many_signs];
         
-        int counter = 0;
-        array[counter] = scanner.nextLine();
+        
+        array[0] = scanner.nextLine();
         
         System.out.println("Which sign would you like to add to an array:");
-        for (counter = 0;counter < how_many_signs; counter++){
+        for (int counter = 0; counter < how_many_signs; counter++){
 
             array[counter] = scanner.nextLine();
             System.out.println("Which sign would you like to add to an array:");
