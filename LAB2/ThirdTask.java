@@ -1,20 +1,12 @@
 package pjatk;
-import javafx.scene.control.Tab;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class pr_8 {
+public class ThirdTask {
     public static void main(String[] args) {
-        int[] Tablica = {4,-2,2137,-26,25,-21};
-        int i = 0;
-        int c = 0;
-        while (i< Tablica.length){
-            if (Tablica[i] > 0){
-                c = c+Tablica[i];
-            }
-            i++;
+        int[] array = {14,5,-23,-34,21,37,28};
+        int sum = 0;
+        for (int counter = 0; counter < array.length; counter++){
+            sum = sum + array[counter];
         }
-    System.out.println(c);
+        System.out.println(sum);
     }
 }
