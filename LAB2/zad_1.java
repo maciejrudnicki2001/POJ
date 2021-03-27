@@ -3,23 +3,23 @@ package pjatk;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class pr_6 {
-    public static void main(String[] args) {
+public class FirstHomeTask {
+        public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ile liczb do tablicy: ");
-        int x = scanner.nextInt();
-        String[] Tablica = new String[x];
-        int i = 0;
-        String znak = " ";
-        System.out.println("Jaki znak chcesz dodać do tablicy:");
-        znak = scanner.nextLine();
-        while (x > i){
-            znak = scanner.nextLine();
-            System.out.println("Jaki znak chcesz dodać do tablicy:");
+        System.out.println("How many signs do you want: ");
+        int how_many_signs = scanner.nextInt();
+        String[] array = new String[how_many_signs];
+        
+        int counter = 0;
+        array[counter] = scanner.nextLine();
+        
+        System.out.println("Which sign would you like to add to an array:");
+        for (counter = 0;counter < how_many_signs; counter++){
 
-            Tablica[i] = znak;
-            i++;
+            array[counter] = scanner.nextLine();
+            System.out.println("Which sign would you like to add to an array:");
+            
         }
-        System.out.println(Arrays.toString(Tablica));
+        System.out.println(Arrays.toString(array));
     }
 }
