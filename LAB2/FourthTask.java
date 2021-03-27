@@ -1,12 +1,15 @@
 package pjatk;
 
 public class FourthTask {
-    public static void main(String[] args) {
-        int[] array = {14,5,-23,-34,21,37,28};
+    public static int plus_sum(int[] array){
         int sum = 0;
-        for (int counter = 0; counter < array.length; counter++){
-            sum = sum + array[counter];
+        for(int counter = 0; counter < array.length; counter++){
+            if (array[counter] > 0){
+                sum = sum + array[counter];
+                
+            }
+            
         }
-        System.out.println(sum);
+        return sum;
     }
 }
