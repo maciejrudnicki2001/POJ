@@ -20,7 +20,7 @@ public class Coordinates {
         return this.y;
     }
     public double Length(int x2, int y2){
-        double length = Math.sqrt(Math.pow((double)this.x - (double)x2, 2) + Math.pow((double)this.y - (double)y2, 2));
+        double length = (Math.abs(Math.sqrt(Math.pow((double)this.x - (double)x2, 2) + Math.pow((double)this.y - (double)y2, 2))));
         return length;
     }
     String Location(){
