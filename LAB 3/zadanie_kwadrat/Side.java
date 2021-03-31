@@ -8,11 +8,11 @@ public class Side {
             side = a;
         }
 
-    public static int AreaCalc(int side){
+    public static int areacalc(int side){
         int area = side * side;
         return area;
     }
-    public static int PerimeterCalc(int side){
+    public static int perimetercalc(int side){
         int perimeter = side * 4;
         return perimeter;
     }
