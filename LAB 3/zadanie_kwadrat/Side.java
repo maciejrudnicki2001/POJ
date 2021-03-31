@@ -9,7 +9,7 @@ public class Side {
         }
 
     public static int AreaCalc(int side){
-        int area = side * 2;
+        int area = side * side;
         return area;
     }
     public static int PerimeterCalc(int side){
