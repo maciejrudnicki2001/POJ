@@ -22,7 +22,7 @@ public class Item {
     public String toString() {
         return "name='" + product + ',' +
                 ", price=" + price +
-                ", quantiny=" + quantity +
+                ", quantity=" + quantity +
                 ", total=" + fullPrice() +
                 '}';
 
