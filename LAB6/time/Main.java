@@ -6,6 +6,6 @@ public class Main {
         final Time time2 = new Time(3, 4);
         System.out.println(time1);
         System.out.println(time1.addtime(time2));
-        System.out.println(time1.multiplier(20));
+        System.out.println(time1.multiplier(3));
     }
 }
