@@ -1,19 +1,17 @@
 package pjatk.bank_acc;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
-public class BankAccount {
+public class BankAcc {
     private static final String EMPTY = "";
     private static final String MINUS = "-";
 
     private double balance;
-    public BankAccount(final double initialBalance) {
+    public BankAcc(final double initialBalance) {
         balance = BigDecimal.valueOf(initialBalance).setScale(2, RoundingMode.HALF_UP).doubleValue();
         printBalance();
     }
-        //There could be a problem, and there is exception InsufficientFundsException
-        public void transaction(final String value) throws Exception{
+    //There could be a problem, and there is exception InsufficientFundsException
+    public void transaction(final String value) throws Exception{
         try{
             if (value.startsWith(MINUS)) {
                 withdraw(value.replaceFirst(MINUS, EMPTY));
@@ -39,4 +37,3 @@ public class BankAccount {
         System.out.println("Account has a balance of " + balance);
     }
 }
-
