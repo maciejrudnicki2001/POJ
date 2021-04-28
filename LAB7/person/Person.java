@@ -1,5 +1,7 @@
 package pjatk.person;
 
+import pjatk.clases.E;
+
 public class Person {
 
     private static final String EMPTY_STRING = "";
@@ -25,13 +27,14 @@ public class Person {
             throw new Exception("Birth Year is incorrect! Given:" + birthYearNumb);
         }
     }
-    private int toInt(final String value){
+    private int toInt(final String value) throws Exception {
         try {
-            return 0;
+            System.exit(99);
+            return Integer.parseInt(value);
         } catch (final NumberFormatException x){
-            return 10;
-        } catch (final Exception e){
-            return -1;
+            throw new Exception("Birth year cannot be parsed to int! Given:" + value);
+        } finally {
+            System.out.println("Finally");
         }
     }
 }
