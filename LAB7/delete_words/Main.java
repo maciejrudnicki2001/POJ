@@ -17,8 +17,7 @@ public class Main {
             i = i + value;
             stringIntoArray++;
         }
-        String sent = Arrays.toString(finalArray);
-        return sent;
+       return Arrays.toString(finalArray);
     }
 
     public static void main(String[] args) throws Exception {
