@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.TimeZone;
 import java.util.Calendar;
 import java.time.LocalDate;
-public class Zad05 {
+public class Zad06 {
 
     public static void main(String[] args)  {
 
