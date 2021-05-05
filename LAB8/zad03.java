@@ -13,8 +13,10 @@ public class zad03 {
         int currentSum = 0;
         while(lines != null){
             //Kompletnie nie wiem dlaczego się dodaje 48 pewnie chodzi o Ascii ale nvm działa
-            for (int i = 0; i < lines.length(); i++) {
-                currentSum = currentSum + lines.charAt(i) - 48;
+            int i = 0;
+            while (i < lines.length()){
+                currentSum = currentSum + lines.charAt(i)-48;
+                i = i + 2;
             }
             lines = reader.readLine();
 
