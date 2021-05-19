@@ -13,12 +13,15 @@ public class Student {
         this.grades.get(lesson).add(grade);
     }
     public double getAvgGrade(String lesson){
-        double sum = 0;
-        int i = 0;
-        while(i < grades.get(lesson).size()) {
-            sum = sum + grades.get(lesson).get(i);
-            i++;
+        try {
+            double sum = 0;
+            int i = 0;
+            while (i < grades.get(lesson).size()) {
+                sum = sum + grades.get(lesson).get(i);
+                i++;
+            } return sum / grades.size();
+
+        } catch(NullPointerException f){
+            return 0;
         }
-        return sum/grades.size();
-    }
-}
+}}
