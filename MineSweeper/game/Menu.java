@@ -1,6 +1,5 @@
 package MineSweeper.game;
 import javax.swing.*;
-import javax.swing.plaf.basic.DefaultMenuLayout;
 import java.awt.*;
 import java.awt.event.*;
 public class Menu extends JFrame{
@@ -37,7 +36,7 @@ public class Menu extends JFrame{
         easy.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Minesweeper ms = new Minesweeper(5,10,10);
+                Minesweeper ms = new Minesweeper(Difficulties.Easy.getMines(),Difficulties.Easy.getRows(), Difficulties.Easy.getCols());
                 ms.setVisible(true);
                 home.setVisible(false);
             }
@@ -60,7 +59,7 @@ public class Menu extends JFrame{
         medium.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Minesweeper ms = new Minesweeper(10,20,20);
+                Minesweeper ms = new Minesweeper(Difficulties.Medium.getMines(),Difficulties.Medium.getRows(), Difficulties.Medium.getCols());
                 ms.setVisible(true);
                 home.setVisible(false);
             }
@@ -88,7 +87,7 @@ public class Menu extends JFrame{
         hard.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Minesweeper ms = new Minesweeper(50,30,30);
+                Minesweeper ms = new Minesweeper(Difficulties.Hard.getMines(),Difficulties.Hard.getRows(),Difficulties.Hard.getCols());
                 ms.setVisible(true);
                 home.setVisible(false);
             }
@@ -116,7 +115,7 @@ public class Menu extends JFrame{
         impossible.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Minesweeper ms = new Minesweeper(2499,50,50);
+                Minesweeper ms = new Minesweeper(Difficulties.Impossible.getMines(),Difficulties.Impossible.getRows(), Difficulties.Impossible.getCols());
                 ms.setVisible(true);
                 home.setVisible(false);
             }
