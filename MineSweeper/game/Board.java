@@ -10,24 +10,18 @@ import javax.swing.*;
 
 public class Board extends JPanel {
 
-    private final int NUM_IMAGES = 13;
-    private final int CELL_SIZE = 15;
+    private final int CELL_SIZE =15;
 
-    private final int COVER_FOR_CELL = 100;
+    private final int COVER_FOR_CELL = 10;
     private final int MARK_FOR_CELL = 10;
     private final int EMPTY_CELL = 0;
     private final int MINE_CELL = 9;
     private final int COVERED_MINE_CELL = MINE_CELL + COVER_FOR_CELL;
     private final int MARKED_MINE_CELL = COVERED_MINE_CELL + MARK_FOR_CELL;
 
-    private final int DRAW_MINE = 9;
-    private final int DRAW_COVER = 10;
-    private final int DRAW_MARK = 11;
-    private final int DRAW_WRONG_MARK = 12;
-
-    private  int N_MINES;
-    private  int N_ROWS;
-    private  int N_COLS;
+    private final int N_MINES;
+    private final int N_ROWS;
+    private final int N_COLS;
     public Board(JLabel status, int mines, int rows, int cols) {
         this.N_MINES = mines;
         this.N_ROWS = rows;
@@ -40,8 +34,8 @@ public class Board extends JPanel {
 
 
 
-    private  int BOARD_WIDTH = N_COLS * CELL_SIZE + 1;
-    private  int BOARD_HEIGHT = N_ROWS * CELL_SIZE + 1;
+    private final int BOARD_WIDTH;
+    private final int BOARD_HEIGHT;
 
     private int[] field;
     private boolean inGame;
@@ -56,6 +50,7 @@ public class Board extends JPanel {
     private void initBoard() {
 
         setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HEIGHT));
+        int NUM_IMAGES = 13;
         img = new Image[NUM_IMAGES];
 
         for (int i = 0; i < NUM_IMAGES; i++) {
@@ -265,14 +260,16 @@ public class Board extends JPanel {
                     inGame = false;
                 }
 
+                int DRAW_COVER = 10;
+                int DRAW_MARK = 11;
                 if (!inGame) {
 
                     if (cell == COVERED_MINE_CELL) {
-                        cell = DRAW_MINE;
+                        cell = 9;
                     } else if (cell == MARKED_MINE_CELL) {
                         cell = DRAW_MARK;
                     } else if (cell > COVERED_MINE_CELL) {
-                        cell = DRAW_WRONG_MARK;
+                        cell = 12;
                     } else if (cell > MINE_CELL) {
                         cell = DRAW_COVER;
                     }
@@ -298,10 +295,9 @@ public class Board extends JPanel {
             status.setText("You won!");
 
         } else if (!inGame) {
-            status.setText("Game Over!");
+            status.setText("You Died!");
         }
     }
-
     private class MinesAdapter extends MouseAdapter {
 
         @Override
@@ -377,4 +373,6 @@ public class Board extends JPanel {
             }
         }
     }
+
+
 }
